@@ -6,7 +6,7 @@ const cors = require('cors');
 
 app.use(express.json());
 app.use(cors({
-  origin: 'http://localhost:4200',
+  origin: 'https://blogging-app-client-lyart.vercel.app',
   credentials:true
 }));
 //routers
