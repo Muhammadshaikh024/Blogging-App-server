@@ -19,11 +19,11 @@ const {authenticate,authorizeAdmin}=require('./middleware/auth');
 app.use('/api/v1/auth',authRouter)
 app.use('/api/v1/admin',authenticate,authorizeAdmin,adminRouter)
 app.use('/api/v1/posts',authenticate,postsRouter);
-app.use('*',(req,res)=>{
-  res.status(404).json({msg:"Resource not found"})
-})
+
+
 
 const port=process.env.PORT;
+
 
 const start = () =>{
     try {
@@ -35,6 +35,7 @@ const start = () =>{
       console.error(error);
     }
 }
+
 
 start();
 
